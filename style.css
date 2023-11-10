@@ -60,11 +60,16 @@ body {
 }
 
 .testimonial-card:first-child::before {
-	content: url(images/bg-pattern-quotation.svg);
+	content: "";
+	width: 30%;
+	height: 20%;
+	background-image: url(images/bg-pattern-quotation.svg);
+	background-position: center;
+	background-size: cover;
 	display: block;
 	line-height: 0;
 	position: absolute;
-	top: 0;
+	top: 0.5%;
 	right: 10%;
 	z-index: -1;
 }
@@ -178,8 +183,15 @@ body {
 }
 
 @media (min-width: 400px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	.fitting-container {
-		padding: 10% 0;
+		padding: 0;
+		margin: 25% 0;
 	}
 
 	.main-container {
@@ -260,6 +272,12 @@ body {
 
 	.user-details {
 		margin: 0 0 0 1.2em;
+	}
+}
+
+@media (min-width: 635px) {
+	.fitting-container {
+		margin: 33% 0 15% 0;
 	}
 }
 
